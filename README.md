@@ -129,8 +129,8 @@ publishing, and what to do when each of them breaks.
 
 ## Compact tracks
 
-Beside the main guide, four compact deep-dives — five or six pages each,
-same voice, current as of September 2026:
+Beside the main guide, four compact deep-dives — eight or nine pages each, ending
+in a hands-on build, same voice, current as of September 2026:
 
 - **[Knowledge graphs](https://undefined-ui.github.io/second-brain-os/#track-graph/why-graphs)** — GraphRAG, extraction pipelines, stores, and where plain wikilinks are enough ([docs/track-graph](docs/track-graph))
 - **[Jev engineering](https://undefined-ui.github.io/second-brain-os/#track-jev/system-one-models)** — building with System One models: typed decisions with confidence scores instead of generated text ([docs/track-jev](docs/track-jev))

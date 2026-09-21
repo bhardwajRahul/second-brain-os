@@ -28,32 +28,41 @@ TRACKS = {
     "track-graph": {
         "title": "Knowledge graphs",
         "blurb": "Graphs as agent memory: GraphRAG, extraction pipelines, "
-                 "stores, and where plain wikilinks are enough.",
+                 "stores — then an evening build of a graph layer over "
+                 "your own vault.",
         "order": ["why-graphs", "graphrag", "building-graphs-with-llms",
-                  "graph-stores", "tools", "resources"],
+                  "graph-stores", "tools",
+                  "build-extract", "build-query", "build-use", "resources"],
     },
     "track-jev": {
         "title": "Jev engineering",
         "blurb": "Building with System One models: typed decisions with "
-                 "confidence scores instead of generated text. A week old "
-                 "and moving fast.",
+                 "confidence scores instead of generated text — and a "
+                 "build you can run before your Jev access lands.",
         "order": ["system-one-models", "what-jev-is-good-for",
-                  "jev-in-an-agent-stack", "getting-started", "resources"],
+                  "jev-in-an-agent-stack", "getting-started",
+                  "build-decision-endpoint", "build-router",
+                  "build-swap-in-jev", "resources"],
     },
     "track-harness": {
         "title": "Agent harnesses",
         "blurb": "The machinery around the model: loops, tools, context "
-                 "engineering, permissions, and the current landscape.",
+                 "engineering, the landscape — and a working harness in "
+                 "an evening, about 150 lines.",
         "order": ["what-a-harness-is", "claude-code-as-harness",
                   "context-engineering", "tools-and-mcp",
-                  "harness-landscape", "resources"],
+                  "harness-landscape",
+                  "build-the-loop", "build-guardrails", "build-graduate",
+                  "resources"],
     },
     "track-evals": {
         "title": "Eval engineering",
         "blurb": "Measurement as the discipline of AI products: golden sets, "
-                 "judges that do not lie, agent trajectories, CI.",
+                 "judges that do not lie, agent trajectories — and your "
+                 "first suite built in an afternoon.",
         "order": ["why-evals", "designing-evals", "llm-as-judge",
-                  "agent-evals", "tooling", "resources"],
+                  "agent-evals", "tooling",
+                  "build-traces", "build-suite", "build-ci", "resources"],
     },
 }
 
