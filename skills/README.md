@@ -27,7 +27,8 @@ they work with Claude Code and with any agent that reads the Agent Skills format
 ## Install
 
 ```bash
-cp -r skills/* ~/.claude/skills/
+mkdir -p ~/.claude/skills
+cp -r skills/second-brain-* ~/.claude/skills/
 ```
 
 Or keep them inside the vault at `.claude/skills/` so they travel with it and get

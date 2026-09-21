@@ -33,12 +33,21 @@ mkdir -p ~/brain/.claude
 cp -r second-brain-os/skills   ~/brain/.claude/skills
 cp -r second-brain-os/commands ~/brain/.claude/commands
 cp -r second-brain-os/agents   ~/brain/.claude/agents
+cp -r second-brain-os/scripts  ~/brain/scripts
+
+# the folder READMEs are for reading on GitHub, not for the agent
+rm ~/brain/.claude/*/README.md ~/brain/scripts/README.md
 
 cd ~/brain && claude
 ```
 
+The `scripts/` copy is what lets `/metrics`, `/health` and `/graph-export` run
+`scripts/vault_stats.py` and friends from inside the vault. On Windows, use
+`python` where this guide says `python3`: the `python3` name usually resolves to
+the Microsoft Store stub and does nothing.
+
 1. [Install Obsidian](docs/02-setup/obsidian-install-and-vault.md) and open
-   `~/brain` with "Open folder as vault"
+   the `~/brain` folder you just copied with "Open folder as vault"
 2. [Set up Claude Code](docs/02-setup/claude-code-setup.md), in the terminal or
    the Code tab of the desktop app
 3. [Connect over MCP](docs/02-setup/mcp-obsidian.md) if you want the agent to
@@ -117,6 +126,16 @@ publishing, and what to do when each of them breaks.
 | [Outputs](docs/08-outputs/README.md) | writing, reports, publishing, learning|
 | [Maintenance](docs/09-maintenance/README.md) | linting, review cadence, git, privacy, scaling|
 | [Troubleshooting](docs/10-troubleshooting/README.md) | the failures everyone hits, with fixes|
+
+## Compact tracks
+
+Beside the main guide, four compact deep-dives — five or six pages each,
+same voice, current as of September 2026:
+
+- **[Knowledge graphs](https://undefined-ui.github.io/second-brain-os/#track-graph/why-graphs)** — GraphRAG, extraction pipelines, stores, and where plain wikilinks are enough ([docs/track-graph](docs/track-graph))
+- **[Jev engineering](https://undefined-ui.github.io/second-brain-os/#track-jev/system-one-models)** — building with System One models: typed decisions with confidence scores instead of generated text ([docs/track-jev](docs/track-jev))
+- **[Agent harnesses](https://undefined-ui.github.io/second-brain-os/#track-harness/what-a-harness-is)** — the machinery around the model: loops, tools, context engineering, the landscape ([docs/track-harness](docs/track-harness))
+- **[Eval engineering](https://undefined-ui.github.io/second-brain-os/#track-evals/why-evals)** — measurement as the discipline of AI products ([docs/track-evals](docs/track-evals))
 
 ## Design decisions
 

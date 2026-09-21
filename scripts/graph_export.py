@@ -16,15 +16,27 @@ from xml.sax.saxutils import escape
 
 LINK = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
 TYPE = re.compile(r"^type:\s*(\S+)", re.M)
-SKIP_DIRS = {".git", ".obsidian", ".trash", "node_modules", "raw"}
+# Hidden folders (.claude, .obsidian, .git, .trash), the page templates and
+# the scripts folder hold instructions and tooling, not knowledge, so they are
+# never counted as pages. Same for CLAUDE.md and README.md wherever they sit.
+SKIP_DIRS = {"node_modules", "raw", "templates", "scripts"}
+SKIP_FILES = {"CLAUDE.md", "README.md"}
+
+
+def is_page(name):
+    return name.endswith(".md") and name not in SKIP_FILES
+
+
+def prune(dirnames):
+    dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS and not d.startswith(".")]
 
 
 def load(vault):
     pages = {}
     for dirpath, dirnames, filenames in os.walk(vault):
-        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        prune(dirnames)
         for name in filenames:
-            if name.endswith(".md"):
+            if is_page(name):
                 path = os.path.join(dirpath, name)
                 with open(path, encoding="utf-8", errors="replace") as fh:
                     pages[path] = fh.read()

@@ -9,12 +9,17 @@ readable in any text editor if you ever walk away from the app.
 
 Download from [obsidian.md](https://obsidian.md) and install it.
 
-On the welcome screen, click **Create new vault**. Name it something short you
-will type often, `brain` works. Pick a folder on your machine and click
-**Create**.
+If you ran the Quickstart from the [README](../../README.md), you already have
+a `~/brain` folder with the starter structure in it. On the welcome screen,
+click **Open folder as vault** and pick it.
 
-That folder is now your second brain. Everything the agent writes lands there
-as markdown files.
+If you are starting from nothing, click **Create new vault** instead. Name it
+something short you will type often, `brain` works. Pick a folder on your
+machine and click **Create**, then copy the contents of
+[`vault-template/`](../../vault-template/) into it.
+
+Either way, that folder is now your second brain. Everything the agent writes
+lands there as markdown files.
 
 ## Make one note by hand
 

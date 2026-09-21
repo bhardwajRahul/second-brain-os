@@ -3,8 +3,12 @@
 Seventy-two slash commands for Claude Code, grouped by what you are doing.
 
 ```bash
-cp commands/*.md ~/brain/.claude/commands/
+mkdir -p ~/brain/.claude/commands
+cp commands/*.md ~/brain/.claude/commands/ && rm ~/brain/.claude/commands/README.md
 ```
+
+Leave this README out: anything in `.claude/commands/` becomes a slash command,
+and `/README` is not one you want.
 
 Commands are thin on purpose: each one points at a skill and sets its scope. The
 behaviour lives in the skill, so `/ingest-youtube` and a scheduled task and you
