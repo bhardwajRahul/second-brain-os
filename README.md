@@ -100,6 +100,7 @@ them separate matters more than it sounds.
 | Folder | What it holds |
 |---|---|
 | [`docs/`](docs/README.md) | The guide. Ten sections, from the concept to troubleshooting |
+| [`docs/track-*/`](docs/track-graph/README.md) | Five compact tracks on the wider craft: graphs, Jev, harnesses, loops, evals |
 | [`vault-template/`](vault-template/) | A starter vault: wiki structure, project pipeline, `CLAUDE.md` and page templates |
 | [`skills/`](skills/README.md) | 18 agent skills, one per workflow in the guide |
 | [`commands/`](commands/README.md) | 72 slash commands, scoped entry points into those skills |
@@ -127,15 +128,22 @@ publishing, and what to do when each of them breaks.
 | [Maintenance](docs/09-maintenance/README.md) | linting, review cadence, git, privacy, scaling|
 | [Troubleshooting](docs/10-troubleshooting/README.md) | the failures everyone hits, with fixes|
 
-## Compact tracks
+## The tracks
 
-Beside the main guide, four compact deep-dives — eight or nine pages each, ending
-in a hands-on build, same voice, current as of September 2026:
+Everything above is the second brain. The tracks are the wider craft of
+building with agents — separate subjects, deliberately compact: eight or nine
+pages each, current as of September 2026, and every one ends in a hands-on
+build you can finish in an evening.
 
-- **[Knowledge graphs](https://undefined-ui.github.io/second-brain-os/#track-graph/why-graphs)** — GraphRAG, extraction pipelines, stores, and where plain wikilinks are enough ([docs/track-graph](docs/track-graph))
-- **[Jev engineering](https://undefined-ui.github.io/second-brain-os/#track-jev/system-one-models)** — building with System One models: typed decisions with confidence scores instead of generated text ([docs/track-jev](docs/track-jev))
-- **[Agent harnesses](https://undefined-ui.github.io/second-brain-os/#track-harness/what-a-harness-is)** — the machinery around the model: loops, tools, context engineering, the landscape ([docs/track-harness](docs/track-harness))
-- **[Eval engineering](https://undefined-ui.github.io/second-brain-os/#track-evals/why-evals)** — measurement as the discipline of AI products ([docs/track-evals](docs/track-evals))
+| Track | What it covers | The build |
+|---|---|---|
+| [Knowledge graphs](docs/track-graph/README.md) | GraphRAG, extraction pipelines, stores, wikilinks-as-graph | a queryable graph layer over your own vault |
+| [Jev engineering](docs/track-jev/README.md) | System One models: typed decisions with confidence instead of text | a confidence-gated router, ready for Jev when access lands |
+| [Agent harnesses](docs/track-harness/README.md) | the loop, tools, context engineering, MCP, the landscape | a working harness in ~150 lines |
+| [Loop engineering](docs/track-loop/README.md) | stop conditions, critics, context hygiene, unattended runs | an overnight loop with a ratchet and a morning report |
+| [Eval engineering](docs/track-evals/README.md) | golden sets, LLM judges, agent trajectories, CI gates | your first eval suite, wired into CI |
+
+Read them on the site: [tracks on undefined-ui.github.io](https://undefined-ui.github.io/second-brain-os/).
 
 ## Design decisions
 

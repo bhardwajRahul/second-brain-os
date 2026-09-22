@@ -17,6 +17,20 @@ All ten sections are written. The [roadmap](ROADMAP.md) maps every page in one p
 | [Maintenance](09-maintenance/README.md) | linting, review cadence, git, privacy, scaling|
 | [Troubleshooting](10-troubleshooting/README.md) | the failures everyone hits, with fixes|
 
+## The tracks
+
+Separate from the guide: five compact tracks on the wider craft of building
+with agents, each ending in a hands-on build.
+
+| Track | Pages |
+|---|---|
+| [Knowledge graphs](track-graph/README.md) | 9 |
+| [Jev engineering](track-jev/README.md) | 8 |
+| [Agent harnesses](track-harness/README.md) | 9 |
+| [Loop engineering](track-loop/README.md) | 9 |
+| [Eval engineering](track-evals/README.md) | 9 |
+
 ---
 
 [Back to the repo](../README.md)
+

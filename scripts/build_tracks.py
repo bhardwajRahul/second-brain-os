@@ -55,6 +55,16 @@ TRACKS = {
                   "build-the-loop", "build-guardrails", "build-graduate",
                   "resources"],
     },
+    "track-loop": {
+        "title": "Loop engineering",
+        "blurb": "The control system around the agent: stop conditions, "
+                 "critics, context hygiene — and an overnight loop you can "
+                 "trust by morning.",
+        "order": ["what-loop-engineering-is", "stop-conditions",
+                  "critics-and-verification", "context-hygiene", "patterns",
+                  "build-goal-test", "build-critic", "build-overnight",
+                  "resources"],
+    },
     "track-evals": {
         "title": "Eval engineering",
         "blurb": "Measurement as the discipline of AI products: golden sets, "
@@ -129,6 +139,14 @@ def main():
             f'<article><h3><a href="#{pages[0]["id"]}">{meta["title"]}</a></h3>'
             f'<p>{meta["blurb"]}</p>'
             f'<div class="pg">{len(pages)} pages</div></article>')
+        # a browsable README per track folder, kept in sync with the order
+        toc = "\n".join(f"{n}. [{p['title']}]({os.path.basename(p['path'])})"
+                        for n, p in enumerate(pages, 1))
+        io.open(os.path.join(ROOT, "docs", sec, "README.md"), "w",
+                encoding="utf-8", newline="\n").write(
+            f"# {meta['title']}\n\n{meta['blurb']}\n\n"
+            f"A compact track beside [the main guide](../../README.md) — "
+            f"read it on the site or in order below.\n\n{toc}\n")
         print(f"{sec}: {len(pages)} pages, "
               f"{sum(p['words'] for p in pages)} words")
 
