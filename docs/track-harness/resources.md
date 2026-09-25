@@ -18,6 +18,8 @@ Curated, not exhaustive. Everything here was checked in September 2026 and earns
 - [The lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) — Simon Willison. The security frame for every agent that reads untrusted content. His ongoing blog is the best running commentary on agents generally.
 - [The 2026-07-28 MCP specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/) — what changed when MCP went stateless, from the protocol team.
 
+- [Improved token efficiency](https://cursor.com/blog/improved-token-efficiency) — Cursor. A production harness slimmed in six moves: two thirds of the system prompt deleted as models improved, tools loaded on demand (60% of static tool tokens gone), explicit cache breakpoints, sparser line numbers, subagent discipline. The rare post with numbers per change; [this replication prompt](https://x.com/undefinedKi/status/2103219508605555033) applies the same audit to your own setup.
+
 ## Repos worth reading
 
 - [pi](https://github.com/earendil-works/pi) — a full harness small enough to actually read; the loop, tools and extensions with no ceremony.
